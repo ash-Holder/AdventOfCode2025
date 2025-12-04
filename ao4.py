@@ -4,7 +4,7 @@ part1, part2, = 0,0
 paperMap = []
 
 def isPaper(paper):
-    if paper == "@" or paper == "X":
+    if paper == "@":
         return 1
     else:
         return 0
@@ -76,7 +76,7 @@ with open("input.txt") as file:
 
                 if numAdjacent < 4:
                     addedInRound += 1
-                    paperMap[x][y] = "X"
+                    paperMap[x][y] = "."
 
         part2 += addedInRound
 
@@ -85,10 +85,7 @@ with open("input.txt") as file:
 
         addedInRound = 0
 
-        for x in range(len(paperMap)):
-            for y in range(len(paperMap[x])):
-                if paperMap[x][y] == "X":
-                    paperMap[x][y] = "."
+
 
     print(paperMap)
 
